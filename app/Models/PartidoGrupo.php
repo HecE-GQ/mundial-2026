@@ -6,6 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class PartidoGrupo extends Model
 {
+    protected $fillable = ['grupo_id', 'equipo1_id', 'equipo2_id', 'goles1', 'goles2'];
+
+    protected $table = 'partidos_grupo';
     public function grupo(){
         return $this->belongsTo(Grupo::class);
     }

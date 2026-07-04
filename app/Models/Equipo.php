@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Equipo extends Model
 {
+    protected $fillable = ['grupo_id', 'nombre', 'bandera'];
     // Un equipo pertenece a un grupo
     public function grupo(){
         return $this->belongsTo(Grupo::class);
